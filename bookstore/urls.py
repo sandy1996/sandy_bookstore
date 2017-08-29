@@ -21,5 +21,7 @@ from django.conf.urls import include,url
 urlpatterns = (
     #url(r'^$', 'store.views.index', name='index'),
     url(r'^store/', include('store.urls'), name='store'),
+    url(r'^accounts/', include('registration.backends.default.urls')) ,
     url(r'^admin/', admin.site.urls),
+    #url('^registration/', include('registration.urls')),
 )
